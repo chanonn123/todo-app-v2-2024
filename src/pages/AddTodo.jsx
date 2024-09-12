@@ -1,7 +1,7 @@
 import { useContext, useState } from "react"
 import { TodoContext } from "../contexts/TodoContext"
 import { useNavigate } from "react-router-dom"
-import { Container, Form } from "react-bootstrap"
+import { Button, Container, Form } from "react-bootstrap"
 
 export default function AddTodo() {
   const [title, setTitle] = useState('')
@@ -55,6 +55,10 @@ export default function AddTodo() {
           onChange={e => setCompleted(e.target.checked)}
           className="mb-3"
         />
+
+        {/* Button */}
+
+        <Button variant="primary" type="submit"> Submit</Button>
 
       </Form>
     </Container>
